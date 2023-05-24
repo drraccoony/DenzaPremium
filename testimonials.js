@@ -1,5 +1,10 @@
 const testimonials = [
     {
+      name: "Denza",
+      imageURL: "images/denza.jpg",
+      summary: "Overall I'm pretty happy with this service. A few bugs but outstanding customer service! Everytime there was a mishap Denza really took action and resolved the issue ASAP."
+    },
+    {
       name: "Rico Raccoon",
       imageURL: "https://drraccoon.me/main/user/pages/01.home/DrRaccoonIcon.png",
       summary: "I cant believe I paid for this. I wanted to give the trial a shot, but it started charging me on a weekly basis even though the paid teirs advertise being monthly. The support phone number goes to a disconnected phone line. Stay clear of this!!"
@@ -53,7 +58,11 @@ function updateTestimonial() {
     testimonialNameElement.textContent = randomObject.name;
     testimonialBodyElement.textContent = randomObject.summary;
     testimonialImgElement.src = randomObject.imageURL;
-    testimonialNameSigElement.textContent = randomSig;
+    if (randomIndex == 0) {
+      testimonialNameSigElement.textContent = "Denza";
+    } else {
+      testimonialNameSigElement.textContent = randomSig;
+    }
 }
 
 updateTestimonial();
